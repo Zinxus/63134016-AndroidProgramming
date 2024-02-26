@@ -1,10 +1,12 @@
+package lab1;
+
 import java.util.Scanner;
 
-public class lab2 {
+public class b2 {
 	private double dai;
 	private double rong;
 	
-	public lab2(double chieuDai,double chieuRong) {
+	public b2(double chieuDai,double chieuRong) {
 		dai=chieuDai;
 		rong=chieuRong;
 	}
@@ -28,7 +30,7 @@ public class lab2 {
 		System.out.println("Nhap chieu rong hinh chu nhat");
 		double rong= scanner.nextDouble();
 		
-		lab2 hinhChuNhat= new lab2(dai,rong);
+		b2 hinhChuNhat= new b2(dai,rong);
 		
 		double chuvi=hinhChuNhat.ChuVi();
 		double dientich=hinhChuNhat.DienTich();
@@ -40,5 +42,4 @@ public class lab2 {
 		
 		scanner.close();	
 	}
-
 }

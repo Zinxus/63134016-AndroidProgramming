@@ -1,6 +1,8 @@
+package lab1;
+
 import java.util.Scanner;
 
-public class Lab1 {
+public class b1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,6 +13,6 @@ public class Lab1 {
 		double diemTB = scanner.nextDouble();
 		System.out.printf("%s %f điểm", hoTen, diemTB);
 
+		scanner.close();
 	}
-
 }
