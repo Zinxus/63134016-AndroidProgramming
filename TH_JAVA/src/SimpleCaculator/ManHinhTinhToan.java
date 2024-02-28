@@ -1,3 +1,4 @@
+package SimpleCaculator;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
