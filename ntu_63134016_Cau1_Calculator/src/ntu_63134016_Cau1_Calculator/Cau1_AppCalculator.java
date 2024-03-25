@@ -54,7 +54,7 @@ public class Cau1_AppCalculator implements ActionListener {
 	public Cau1_AppCalculator() {
 		prepareGui();
 		addComponenets();
-		
+		addActionEvent();
 	}
 	
 	public void prepareGui() {
@@ -201,7 +201,28 @@ public class Cau1_AppCalculator implements ActionListener {
 	}
 	
 	public void addActionEvent() {
-		
+		logocalculationButton.addActionListener(this);
+		buttonClear.addActionListener(this);
+		buttonDelete.addActionListener(this);
+		buttonDiv.addActionListener(this);
+		buttonSqrt.addActionListener(this);
+		buttonSquare.addActionListener(this);
+		buttonReciprocal.addActionListener(this);
+		buttonMinus.addActionListener(this);
+		buttonSeven.addActionListener(this);
+		buttonEight.addActionListener(this);
+		buttonNine.addActionListener(this);
+		buttonMul.addActionListener(this);
+		buttonFour.addActionListener(this);
+		buttonFive.addActionListener(this);
+		buttonSix.addActionListener(this);
+		buttonPlus.addActionListener(this);
+		buttonOne.addActionListener(this);
+		buttonTwo.addActionListener(this);
+		buttonThree.addActionListener(this);
+		buttonEqual.addActionListener(this);
+		buttonZero.addActionListener(this);
+		buttonDot.addActionListener(this);
 	}
 	
 	public static void main(String[] args) {
