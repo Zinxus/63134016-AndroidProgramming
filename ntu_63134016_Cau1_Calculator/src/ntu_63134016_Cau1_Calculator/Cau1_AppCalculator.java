@@ -276,6 +276,30 @@ public class Cau1_AppCalculator implements ActionListener {
 			}else {
 				textField.setText(textField.getText()+".");
 			}
+		}else if (source==buttonPlus) {
+			String str = textField.getText();
+			num1 = Double.parseDouble(textField.getText());
+			calculation = 1;
+			textField.setText("");
+			Label.setText(str+"+");
+		}else if (source==buttonMinus) {
+			String str = textField.getText();
+			num1 = Double.parseDouble(textField.getText());
+			calculation = 2;
+			textField.setText("");
+			Label.setText(str+"-");
+		}else if (source==buttonMul) {
+			String str = textField.getText();
+			num1 = Double.parseDouble(textField.getText());
+			calculation = 3;
+			textField.setText("");
+			Label.setText(str+"X");
+		}else if (source==buttonDiv) {
+			String str = textField.getText();
+			num1 = Double.parseDouble(textField.getText());
+			calculation = 4;
+			textField.setText("");
+			Label.setText(str+"/");
 		}
 	}
 	
