@@ -342,7 +342,8 @@ public class Cau1_AppCalculator implements ActionListener {
 			}else {
 				textField.setText(Double.toString(result));
 			}
-		
+			Label.setText("");
+			num1=result;
 		}
 	}
 	
