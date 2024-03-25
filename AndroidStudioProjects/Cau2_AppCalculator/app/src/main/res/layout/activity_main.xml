@@ -231,7 +231,7 @@
                 android:backgroundTint="#DDDDDD"
                 android:text="-"
                 android:textColor="@color/black"
-                android:textSize="32dp"
+                android:textSize="40dp"
                 app:cornerRadius="36dp" />
         </LinearLayout>
 
@@ -274,7 +274,7 @@
                 android:backgroundTint="@color/white"
                 android:text="."
                 android:textColor="@color/black"
-                android:textSize="32dp"
+                android:textSize="40dp"
                 app:cornerRadius="36dp" />
 
             <com.google.android.material.button.MaterialButton
