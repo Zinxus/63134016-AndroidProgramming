@@ -68,9 +68,10 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="303dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginStart="46dp"
         android:text="Nguyễn Chí Hiếu"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button"
         tools:layout_editor_absoluteY="244dp" />
@@ -80,6 +81,7 @@
         android:layout_width="255dp"
         android:layout_height="58dp"
         android:text="63-CNTT-1"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button1"
         tools:layout_editor_absoluteY="294dp" />
@@ -89,7 +91,19 @@
         android:layout_width="259dp"
         android:layout_height="57dp"
         android:text="63134016"
+        android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"
         tools:layout_editor_absoluteY="357dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="268dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:text="30/06/2003"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        tools:layout_editor_absoluteY="417dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
