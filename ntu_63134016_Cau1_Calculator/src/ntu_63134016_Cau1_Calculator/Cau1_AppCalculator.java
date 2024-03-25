@@ -18,7 +18,7 @@ import javax.swing.SwingConstants;
 
 import java.awt.event.*;
 
-public class Cau1_AppCalculator  {
+public class Cau1_AppCalculator implements ActionListener {
 	
 	double num1=0, num2=0,result=0;
 	int calculation;
@@ -27,7 +27,6 @@ public class Cau1_AppCalculator  {
 	JFrame frame = new JFrame("Calculator");
 	JLabel Label = new JLabel();
 	JTextField textField = new JTextField();
-	JRadioButton radioButton = new JRadioButton();
 	JButton logocalculationButton = new JButton("calculation");
 	JButton buttonZero = new JButton("0");
 	JButton buttonOne = new JButton("1");
@@ -55,7 +54,7 @@ public class Cau1_AppCalculator  {
 	public Cau1_AppCalculator() {
 		prepareGui();
 		addComponenets();
-
+		
 	}
 	
 	public void prepareGui() {
@@ -201,6 +200,9 @@ public class Cau1_AppCalculator  {
 		frame.add(buttonClear);
 	}
 	
+	public void addActionEvent() {
+		
+	}
 	
 	public static void main(String[] args) {
 		Cau1_AppCalculator calculator = new Cau1_AppCalculator();
