@@ -1,4 +1,6 @@
 package ntu_63134016_Cau1_Calculator;
+
+
 import java.awt.Color;
 import java.awt.Font;
 
@@ -198,7 +200,6 @@ public class Cau1_AppCalculator implements ActionListener {
 		buttonClear.setFocusable(false);
 		frame.add(buttonClear);
 	}
-	
 	public void addActionEvent() {
 		logocalculationButton.addActionListener(this);
 		buttonClear.addActionListener(this);
@@ -222,6 +223,8 @@ public class Cau1_AppCalculator implements ActionListener {
 		buttonEqual.addActionListener(this);
 		buttonZero.addActionListener(this);
 		buttonDot.addActionListener(this);
+		
+		
 	}
 	
 	public static void main(String[] args) {
@@ -230,6 +233,7 @@ public class Cau1_AppCalculator implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
 		Object source = e.getSource();
 		if(source==buttonClear){
 			Label.setText("");
@@ -344,7 +348,7 @@ public class Cau1_AppCalculator implements ActionListener {
 			}
 			Label.setText("");
 			num1=result;
-		}
+		}	
 	}
 	
 }
