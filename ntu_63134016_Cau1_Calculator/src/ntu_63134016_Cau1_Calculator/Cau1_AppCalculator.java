@@ -300,6 +300,28 @@ public class Cau1_AppCalculator implements ActionListener {
 			calculation = 4;
 			textField.setText("");
 			Label.setText(str+"/");
+		}else if (source==buttonSquare) {
+			num1 = Double.parseDouble(textField.getText());
+			double square =Math.pow(num1,2);
+			String string = Double.toString(square);
+			if(string.endsWith(".0")){
+				textField.setText(string.replace(".0", ""));
+			}else {
+				textField.setText(string);
+			}
+		}else if (source==buttonSqrt) {
+			num1 = Double.parseDouble(textField.getText());
+			double sqrt =Math.sqrt(num1);	
+			textField.setText(Double.toString(sqrt));
+		}else if (source == buttonReciprocal) {
+			num1 = Double.parseDouble(textField.getText());
+			double reciprocal =1/num1;
+			String string = Double.toString(reciprocal);
+			if(string.endsWith(".0")){
+				textField.setText(string.replace(".0", ""));
+			}else {
+				textField.setText(string);
+			}
 		}
 	}
 	
