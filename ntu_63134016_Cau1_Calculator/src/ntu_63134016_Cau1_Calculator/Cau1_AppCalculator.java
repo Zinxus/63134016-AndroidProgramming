@@ -1,6 +1,4 @@
 package ntu_63134016_Cau1_Calculator;
-
-
 import java.awt.Color;
 import java.awt.Font;
 
@@ -9,7 +7,8 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JRadioButton;
+
+
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -229,6 +228,14 @@ public class Cau1_AppCalculator implements ActionListener {
 		Cau1_AppCalculator calculator = new Cau1_AppCalculator();
 	}
 
-	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		if(source==buttonClear){
+			Label.setText("");
+			textField.setText("");
+			
+		}
+	}
 	
 }
