@@ -50,9 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         assignIn(button9,R.id.buton_9);
         assignIn(buttonAC,R.id.buton_ac);
         assignIn(buttonDot,R.id.buton_dot);
-
-
-
     }
 
     void assignIn(MaterialButton btn, int id){
