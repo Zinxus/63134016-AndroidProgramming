@@ -152,7 +152,7 @@
                 android:layout_height="72dp"
                 android:layout_margin="12dp"
                 android:backgroundTint="#DDDDDD"
-                android:text="X"
+                android:text="*"
                 android:textColor="@color/black"
                 android:textSize="32dp"
                 app:cornerRadius="36dp" />

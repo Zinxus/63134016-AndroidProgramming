@@ -6,9 +6,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 import  org.mozilla.javascript.Context;
@@ -69,19 +66,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if(buttonText.equals("=")){
+            String finalResult =getResult(dataToCalculate);
+            if(!finalResult.equals("Error")){
+                resultTV.setText(finalResult);
+            }
             solutionTV.setText(resultTV.getText());
+            return;
         }
         if(buttonText.equals("C")){
-            dataToCalculate = dataToCalculate.substring(0,dataToCalculate.length()-1);
+            if(!dataToCalculate.equals("")) {
+                if(dataToCalculate.length()==1){
+                    solutionTV.setText("");
+                    resultTV.setText("0");
+                    return;
+                }else {
+                    dataToCalculate = dataToCalculate.substring(0, dataToCalculate.length() - 1);
+                }
+            }else{
+                return;
+            }
         }else {
             dataToCalculate =dataToCalculate+buttonText;
         }
         solutionTV.setText(dataToCalculate);
 
-        String finalResult =getResult(dataToCalculate);
-        if(!finalResult.equals("Error")){
-            resultTV.setText(finalResult);
-        }
     }
     String getResult(String data){
         try {
