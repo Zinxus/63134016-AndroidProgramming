@@ -235,6 +235,47 @@ public class Cau1_AppCalculator implements ActionListener {
 			Label.setText("");
 			textField.setText("");
 			
+		}else if (source==buttonDelete) {
+			int length = textField.getText().length();
+			int number =length-1;
+			if(length>0)
+			{
+				StringBuilder backBuilder = new StringBuilder(textField.getText());
+				backBuilder.deleteCharAt(number);
+				textField.setText(backBuilder.toString());
+			}if(textField.getText().endsWith("")){
+				Label.setText("");
+			}
+		}else if (source==buttonZero){
+			if (textField.getText().equals("0")){
+				return;
+			}else {
+				textField.setText(textField.getText()+ "0");
+			}
+		}else if (source == buttonOne) {
+			textField.setText(textField.getText()+"1");
+		}else if (source == buttonTwo) {
+			textField.setText(textField.getText()+"2");
+		}else if (source == buttonThree) {
+			textField.setText(textField.getText()+"3");
+		}else if (source == buttonFour) {
+			textField.setText(textField.getText()+"4");
+		}else if (source == buttonFive) {
+			textField.setText(textField.getText()+"5");
+		}else if (source == buttonSix) {
+			textField.setText(textField.getText()+"6");
+		}else if (source == buttonSeven) {
+			textField.setText(textField.getText()+"7");
+		}else if (source == buttonEight) {
+			textField.setText(textField.getText()+"8");
+		}else if (source == buttonNine) {
+			textField.setText(textField.getText()+"9");
+		}else if (source==buttonDot) {
+			if(textField.getText().contains(".")){
+				return;
+			}else {
+				textField.setText(textField.getText()+".");
+			}
 		}
 	}
 	
