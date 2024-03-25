@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             dataToCalculate =dataToCalculate+buttonText;
         }
         solutionTV.setText(dataToCalculate);
+
+        String finalResult =getResult(dataToCalculate);
+        if(!finalResult.equals("Error")){
+            resultTV.setText(finalResult);
+        }
     }
     String getResult(String data){
         try {
@@ -87,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             context.setOptimizationLevel(-1);
             Scriptable scriptable = context.initStandardObjects();
             String finalResult = context.evaluateString(scriptable,data,"Javascript",1,null).toString();
+
             return finalResult;
         }catch (Exception e){
             return "Error";
