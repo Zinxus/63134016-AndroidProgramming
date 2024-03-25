@@ -9,8 +9,7 @@ import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
-
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -19,7 +18,7 @@ import javax.swing.SwingConstants;
 
 import java.awt.event.*;
 
-public class Cau1_AppCalculator implements ActionListener {
+public class Cau1_AppCalculator  {
 	
 	double num1=0, num2=0,result=0;
 	int calculation;
@@ -28,6 +27,7 @@ public class Cau1_AppCalculator implements ActionListener {
 	JFrame frame = new JFrame("Calculator");
 	JLabel Label = new JLabel();
 	JTextField textField = new JTextField();
+	JRadioButton radioButton = new JRadioButton();
 	JButton logocalculationButton = new JButton("calculation");
 	JButton buttonZero = new JButton("0");
 	JButton buttonOne = new JButton("1");
@@ -55,7 +55,7 @@ public class Cau1_AppCalculator implements ActionListener {
 	public Cau1_AppCalculator() {
 		prepareGui();
 		addComponenets();
-		addActionEvent();
+
 	}
 	
 	public void prepareGui() {
@@ -200,155 +200,12 @@ public class Cau1_AppCalculator implements ActionListener {
 		buttonClear.setFocusable(false);
 		frame.add(buttonClear);
 	}
-	public void addActionEvent() {
-		logocalculationButton.addActionListener(this);
-		buttonClear.addActionListener(this);
-		buttonDelete.addActionListener(this);
-		buttonDiv.addActionListener(this);
-		buttonSqrt.addActionListener(this);
-		buttonSquare.addActionListener(this);
-		buttonReciprocal.addActionListener(this);
-		buttonMinus.addActionListener(this);
-		buttonSeven.addActionListener(this);
-		buttonEight.addActionListener(this);
-		buttonNine.addActionListener(this);
-		buttonMul.addActionListener(this);
-		buttonFour.addActionListener(this);
-		buttonFive.addActionListener(this);
-		buttonSix.addActionListener(this);
-		buttonPlus.addActionListener(this);
-		buttonOne.addActionListener(this);
-		buttonTwo.addActionListener(this);
-		buttonThree.addActionListener(this);
-		buttonEqual.addActionListener(this);
-		buttonZero.addActionListener(this);
-		buttonDot.addActionListener(this);
-		
-		
-	}
+	
 	
 	public static void main(String[] args) {
 		Cau1_AppCalculator calculator = new Cau1_AppCalculator();
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-		Object source = e.getSource();
-		if(source==buttonClear){
-			Label.setText("");
-			textField.setText("");
-			
-		}else if (source==buttonDelete) {
-			int length = textField.getText().length();
-			int number =length-1;
-			if(length>0)
-			{
-				StringBuilder backBuilder = new StringBuilder(textField.getText());
-				backBuilder.deleteCharAt(number);
-				textField.setText(backBuilder.toString());
-			}if(textField.getText().endsWith("")){
-				Label.setText("");
-			}
-		}else if (source==buttonZero){
-			if (textField.getText().equals("0")){
-				return;
-			}else {
-				textField.setText(textField.getText()+ "0");
-			}
-		}else if (source == buttonOne) {
-			textField.setText(textField.getText()+"1");
-		}else if (source == buttonTwo) {
-			textField.setText(textField.getText()+"2");
-		}else if (source == buttonThree) {
-			textField.setText(textField.getText()+"3");
-		}else if (source == buttonFour) {
-			textField.setText(textField.getText()+"4");
-		}else if (source == buttonFive) {
-			textField.setText(textField.getText()+"5");
-		}else if (source == buttonSix) {
-			textField.setText(textField.getText()+"6");
-		}else if (source == buttonSeven) {
-			textField.setText(textField.getText()+"7");
-		}else if (source == buttonEight) {
-			textField.setText(textField.getText()+"8");
-		}else if (source == buttonNine) {
-			textField.setText(textField.getText()+"9");
-		}else if (source==buttonDot) {
-			if(textField.getText().contains(".")){
-				return;
-			}else {
-				textField.setText(textField.getText()+".");
-			}
-		}else if (source==buttonPlus) {
-			String str = textField.getText();
-			num1 = Double.parseDouble(textField.getText());
-			calculation = 1;
-			textField.setText("");
-			Label.setText(str+"+");
-		}else if (source==buttonMinus) {
-			String str = textField.getText();
-			num1 = Double.parseDouble(textField.getText());
-			calculation = 2;
-			textField.setText("");
-			Label.setText(str+"-");
-		}else if (source==buttonMul) {
-			String str = textField.getText();
-			num1 = Double.parseDouble(textField.getText());
-			calculation = 3;
-			textField.setText("");
-			Label.setText(str+"X");
-		}else if (source==buttonDiv) {
-			String str = textField.getText();
-			num1 = Double.parseDouble(textField.getText());
-			calculation = 4;
-			textField.setText("");
-			Label.setText(str+"/");
-		}else if (source==buttonSquare) {
-			num1 = Double.parseDouble(textField.getText());
-			double square =Math.pow(num1,2);
-			String string = Double.toString(square);
-			if(string.endsWith(".0")){
-				textField.setText(string.replace(".0", ""));
-			}else {
-				textField.setText(string);
-			}
-		}else if (source==buttonSqrt) {
-			num1 = Double.parseDouble(textField.getText());
-			double sqrt =Math.sqrt(num1);	
-			textField.setText(Double.toString(sqrt));
-		}else if (source == buttonReciprocal) {
-			num1 = Double.parseDouble(textField.getText());
-			double reciprocal =1/num1;
-			String string = Double.toString(reciprocal);
-			if(string.endsWith(".0")){
-				textField.setText(string.replace(".0", ""));
-			}else {
-				textField.setText(string);
-			}
-		}else if (source== buttonEqual) {
-			num2 =Double.parseDouble(textField.getText());
-			switch (calculation) {
-				case 1: 
-					result = num1+num2;
-					break;
-				case 2:
-					result = num1-num2;
-					break;
-				case 3:
-					result = num1*num2;
-					break;
-				case 4:
-					result =num1/num2;
-					break;
-			}if(Double.toString(num1).endsWith(".0")) {
-				textField.setText(Double.toString(result).replace(".0", ""));
-			}else {
-				textField.setText(Double.toString(result));
-			}
-			Label.setText("");
-			num1=result;
-		}	
-	}
+	
 	
 }
